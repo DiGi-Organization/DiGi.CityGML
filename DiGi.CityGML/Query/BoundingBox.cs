@@ -16,7 +16,7 @@ namespace DiGi.CityGML
         public static BoundingBox3D? BoundingBox(this Building? building)
         {
             IEnumerable<ISurface>? surfaces = building?.Surfaces;
-            if (surfaces == null || surfaces.Count() == 0)
+            if (surfaces == null || !surfaces.Any())
             {
                 return null;
             }

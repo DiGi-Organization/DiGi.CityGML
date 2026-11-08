@@ -23,7 +23,7 @@ namespace DiGi.CityGML
                     return result;
                 }
 
-                if (result.StartsWith("ID-"))
+                if (result.StartsWith("ID-", StringComparison.CurrentCulture))
                 {
                     string[] values = result.Split('-');
                     if (values.Length > 2)
